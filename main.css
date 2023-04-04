@@ -1,0 +1,137 @@
+body,
+html {
+	background-color: rgb(50, 115, 160);
+	font-size: 1.15rem;
+	margin: 0;
+}
+
+header,
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 0;
+}
+
+
+.content,
+.logo,
+.menu {
+	display: flex;
+}
+
+header.logo h1 {
+	font-size: 2.65rem;
+	color: white;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.2rem;
+	margin: 0 1rem;
+}
+
+.content {
+	background-color: whitesmoke;
+	justify-content: center;
+}
+
+.content > article {
+	width: 65rem;
+	margin: 1.5rem 1.2rem 3.5rem;
+}
+
+article p {
+	text-align: justify;
+}
+
+article > aside {
+    background-color: lightgray;
+    float: right;
+    text-align: center;
+    width: 15rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.1rem;
+}
+
+article code {
+	font-size: 1rem;
+	background-color: #0e507e;
+	color: #2ded25;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+	border-radius: 0.3rem;
+}
+
+article .code {
+	background-color: slategray;
+	padding: 1rem;
+	margin: 1rem;
+	border: 1px solid black;
+}
+
+section.example {
+	background-color: #0e507e;
+	color: white;
+	padding: 0 15px 15px;
+	margin: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+section.example header {
+	margin: 0;
+}
+
+section.example h3 {
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+/*  footer */
+footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: black;
+} 
+
+/* css for example*/
+.flex-conteiner {
+	display: flex;
+}
+
+.item {
+	background-color: dodgerblue;
+	font-size: 2rem;
+	padding: 25px 40px;
+	margin: 10px;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+}
+
+input.button {
+    font-size: 1rem;
+    background-color: transparent;
+    color: #2ded25;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-bottom: 5px;
+    border: 1px solid dodgerblue;
+    border-radius: 0.3rem;
+}
+
+input.button:hover {
+	background-color: lightseagreen;
+}
