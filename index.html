@@ -44,11 +44,13 @@
 				</header>
 				<p>Kliknij w jeden z guzików, aby zobaczyć jak działa <code>flex-direction:</code> i jego wartości: <code>row</code> lub <code>column</code>.</p>
 				<form>
-					<input class="button" type="button" value="row">
-					<input class="button" type="button" value="column">
+					<input onclick="switchClass('row')" class="button" type="button" value="row">
+					<input onclick="switchClass('column')" class="button" type="button" value="column">
+					<input onclick="resetClass()" class="button" type="button" value="reset">
 				</form>
+				<p class=""><code>flex-direction:<span id="write"></span></code></p>
 				<div class="code">
-					<div class="flex-conteiner">
+					<div id="flex" class="flex-conteiner">
 						<a class="item">1</a>
 						<p class="item">2</p>
 						<div class="item">3</div>
