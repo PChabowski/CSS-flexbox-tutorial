@@ -20,6 +20,8 @@
 		  	</header>
 
     	  	<p>W tym tutorialu dowiesz sie jak używać CCS flexbox. Flexbox jest użytecznym narzędziem które ułatwie budowanie, i konstruowanie witryn internetowych bez konieczności użycia floet leftów i clear both, co zdecydowanie ułatwia i przyspiesza proces budowania witryny, aczkolwiek nie oznacza to ze jest to idealne narzędzie, bo i ona również ma swoje wady jedną z nich jest np. używanie większej ilości divów, aby odpowiednio umieścić elementy na stronie. Aczkolwiek dla mnie flexbox, jest na tyle łatwy i przyjemny do nauczenia że po prostu lubie tej metody używać. Tyle słowem wstępu, bierzmy sie do roboty.</p>
+
+			<hr>
 			
     	  	<!-- <aside><strong style="color: red;text-decoration: underline;">Attention:</strong><br>Przykład komentarza na co waro by zwrócić uwage. </aside> -->
 
@@ -29,37 +31,107 @@
 		  
     	  	<p>Wszystkie elementy blokowe w CSSie takie jak divy <code>&lt;div&gt;</code> czy też pragrafy <code>&lt;p&gt;</code> zaczynają się od nowej lini, z koleji elementy liniowe takie jak &lt;span&gt;, &lt;a&gt; są ułożone w jednej linii i zajmują tyle miejsca ile potrzebują. Jest to dość ważna informacja, tym bardziej ze w fleboxie wszystkie te elementy zachowują się dokładnie tak samo, to znaczy elementy blokowe zachowują się jak elementy liniowe i/lub odwrotnie, elementy liniowe zachowują sie jak blokowe, a wszystko to jest zależne od ustawien względem własnego rodzica. </p>
 
-    	  	<p>Jak skorzystać z modułu fleboxa? bardzo prosto, trzeba zdefiniować elastyczny pojemnik, a robimy to przez nadanie <code>display: flex;</code> we właściwości CSS danego pojemnika. Wszystkie bezpośrednie elementy danego pojemnika, automatycznie stają się elementami elastycznymi.</p> 
+    	  	<p>Jak skorzystać z modułu fleboxa? bardzo prosto, trzeba zdefiniować elastyczny pojemnik, a robimy to przez nadanie <code>display: flex;</code> we właściwości CSS danego pojemnika. Wszystkie bezpośrednie elementy danego pojemnika, automatycznie stają się elementami elastycznymi.</p>
+
+			<hr>
 
 		  	<header>
 				<h2>Właściwość flex-direction</h2>
 		  	</header>
 
-		  	<p>Każdy pojemnik może być wyświetlany jako wiersz, z ang. row albo jako columna, z ang. column, robimy to przez nadanie właściwości CSS <code>flex-direction: row;</code> lub <code>flex-direction: column;</code> w zależności od tego jaki chcemy osiągnąc układał poziomy czy też pionowowy. <strong>W momecie w którym pominiemy właściwość <code>flex-direction:</code> z wartością <code>row</code> lub <code>column</code>, to wszystkie elementy które mają przypisane właściwość <code>display: flex;</code> bedą wyświetlane poziomo,</strong> ponieważ <code>flex-direction: row;</code> jest wartością domyślną elementów elastycznych.</p>
+		  	<p>Każdy pojemnik może być wyświetlany jako wiersz, z ang. row albo jako columna, z ang. column, robimy to przez nadanie właściwości CSS <code>flex-direction: row;</code> lub <code>flex-direction: column;</code> w zależności od tego jaki chcemy osiągnąc układał poziomy czy też pionowowy. <strong>W momecie w którym pominiemy właściwość <code>flex-direction</code> z wartością: <code>row</code> lub <code>column</code>, to wszystkie elementy które mają przypisane właściwość <code>display: flex;</code> bedą wyświetlane poziomo,</strong> ponieważ <code>flex-direction: row;</code> jest wartością domyślną elementów elastycznych.</p>
 
-		  	<section class="example">
-			  <!-- przykład w którym kod bedzie się zmieniał w zależności od ustawień, za pomocą JavaScriptu -->
+		  	<section id="example-1" class="example">
 				<header class="row">
 					<h3>Przykład:</h3>
 				</header>
-				<p>Kliknij w jeden z guzików, aby zobaczyć jak działa <code>flex-direction:</code> i jego wartości: <code>row</code> lub <code>column</code>.</p>
+				<p>Kliknij w jeden z guzików, aby zobaczyć jak działa <code>flex-direction</code> i jego wartości: <code>row</code> lub <code>column</code>.</p>
 				<form>
-					<input onclick="switchClass('row')" class="button" type="button" value="row">
-					<input onclick="switchClass('column')" class="button" type="button" value="column">
-					<input onclick="resetClass()" class="button" type="button" value="reset">
+					<input onclick="switchClass('row', example1)" class="button" type="button" value="row">
+					<input onclick="switchClass('column', example1)" class="button" type="button" value="column">
+					<input onclick="resetClass(example1)" class="button" type="button" value="reset">
 				</form>
-				<p class=""><code>flex-direction:<span id="write"></span></code></p>
+				<p class=""><code>flex-direction:<span class="write"> ;</span></code></p>
 				<div class="code">
-					<div id="flex" class="flex-conteiner">
+					<div class="flex-conteiner">
 						<a class="item">1</a>
 						<p class="item">2</p>
 						<div class="item">3</div>
 						<span class="item">4</span>
 					</div>
 			    </div>
-				<p><strong style="color: yellow;">UWAGA:</strong> zauważ ze w tym przykładzie, nie ustawiłem <code>flex-direction:</code> i jego wartości: <code>row</code> czy <code>column</code>, są one dopiero przypisywane kiedy klikniesz w któryś z przycisków!</p>
+				<p><strong style="color: yellow;">UWAGA:</strong> zauważ ze w tym przykładzie, nie ustawiłem <code>flex-direction</code> i jego wartości: <code>row</code> czy <code>column</code>, są one dopiero przypisywane kiedy klikniesz w któryś z przycisków!</p>
 				<p>kolejną ciekawą rzeczą na którą warto zwrócić uwagę, jest to że elementy w elastycznym kontenerze nie mają przypisane szerokości, i każdy z nich jest innego rodzaju, a zachowują się dokładnie jakby były tego samego typu.</p>
 			</section> 
+
+			<p>Właściwość <code>flex-direction</code> ma jeszcze dwie wartości których możemy użyć, są to <code>row-reverse</code> i <code>column-reverse</code>, działają one podobnie do <code>row</code> i <code>column</code> z tą że róznica ze elementy w środku pojemnika elastycznego będą układane w odwrotenej kolejności, czyli zamiast od lewej do prawej, będą układane od prawej do lewej i zamiast od góry do dołu, to od dołu do góry. Ale łatwiej bedzie to zrozumieć na przykładzie.</p>
+
+			<section id="example-2" class="example">
+				  <header class="row">
+					  <h3>Przykład:</h3>
+				  </header>
+				  <p>Kliknij w jeden z guzików, aby zobaczyć jak działą pozostałe wartości <code>flex-direction:</code></p>
+				  <form>
+					  <input onclick="switchClass('row', example2)" class="button" type="button" value="row">
+					  <input onclick="switchClass('row-reverse', example2)" class="button" type="button" value="row-reverse">
+					  <input onclick="switchClass('column', example2)" class="button" type="button" value="column">
+					  <input onclick="switchClass('column-reverse', example2)" class="button" type="button" value="column-reverse">
+					  <input onclick="resetClass(example2)" class="button" type="button" value="reset">
+				  </form>
+				  <p class=""><code>flex-direction:<span class="write"> ;</span></code></p>
+				  <div class="code">
+					  <div class="flex-conteiner">
+						  <a class="item">1</a>
+						  <p class="item">2</p>
+						  <div class="item">3</div>
+						  <span class="item">4</span>
+					  </div>
+				  </div>
+			  </section> 
+
+<p>Przykładowy kod HTMLa:</p>
+
+<div class="code">
+<pre>
+<code>
+	&lt;div class="flex-conteiner"&gt;
+	  &lt;div class="item"&gt;&lt;/div&gt;
+	  &lt;div class="item"&gt;&lt;/div&gt;
+	  &lt;div class="item"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+</code>
+</pre>
+</div>
+
+<p>Przykładowy kod CSSa:</p>
+
+<div class="code">
+<pre>
+<code>
+	.flex-conteiner {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.item {
+		background-color: dodgerblue;
+		font-size: 2rem;
+		padding: 25px 40px;
+		margin: 10px;
+	}
+</code>
+</pre>
+</div>
+
+			  <hr>
+
+			  <header>
+				<h2>Właściwość flex-wrap</h2>
+		  	</header>
+
+		  	<p>Właściwość <code>flex-wrap</code> określa czy elementy w srodku contenera powinny się zwijać czy też nie.</p>
+
+
     	</article>
 	</main>
 
@@ -67,7 +139,9 @@
     <div>
 		<p>Code by <a href="https://pchabowski.github.io/">Paweł Chabowski</a></p>
 	</div>
-	<script src="script.js"></script>
-	</footer>
+</footer>
+
+<script src="variables.js"></script>
+<script src="functions.js"></script>
 </body>
 </html>

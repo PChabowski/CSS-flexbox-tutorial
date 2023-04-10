@@ -72,6 +72,14 @@ article .code {
 	border: 1px solid black;
 }
 
+article > .code {
+	background-color: #0e507e;
+}
+
+article pre > code {
+	background-color: transparent;
+}
+
 section.example {
 	background-color: #0e507e;
 	color: white;
@@ -117,9 +125,18 @@ footer a:hover {
 	flex-direction: row;
 }
 
+.row-reverse {
+	flex-direction: row-reverse;
+}
+
 .column {
 	flex-direction: column;
 }
+
+.column-reverse {
+	flex-direction: column-reverse;
+}
+
 
 input.button {
     font-size: 1rem;
