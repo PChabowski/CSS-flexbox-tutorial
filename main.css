@@ -38,7 +38,7 @@ header.logo h1 {
 }
 
 .content > article {
-	width: 65rem;
+	width: 85%;
 	margin: 1.5rem 1.2rem 3.5rem;
 }
 
@@ -137,6 +137,25 @@ footer a:hover {
 	flex-direction: column-reverse;
 }
 
+.wrap {
+	flex-wrap: wrap;
+}
+
+.nowrap {
+	flex-wrap: nowrap;
+}
+
+.wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+#example-3 .item {
+	width: 100px;
+	line-height: 75px;
+	text-align: center;
+	padding: 0;
+
+}
 
 input.button {
     font-size: 1rem;

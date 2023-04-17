@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header class="logo">
-        <h1>CSS Flexbox- Tutorial</h1>
+        <h1>CSS Flexbox - Tutorial</h1>
 	</header>
 
 	<main class="content">
@@ -95,9 +95,10 @@
 <pre>
 <code>
 	&lt;div class="flex-conteiner"&gt;
-	  &lt;div class="item"&gt;&lt;/div&gt;
-	  &lt;div class="item"&gt;&lt;/div&gt;
-	  &lt;div class="item"&gt;&lt;/div&gt;
+	  &lt;a class="item"&gt;1&lt;/a&gt;
+	  &lt;p class="item"&gt;2&lt;/p&gt;
+	  &lt;div class="item"&gt;3&lt;/div&gt;
+	  &lt;span class="item"&gt;4&lt;/span&gt;
 	&lt;/div&gt;
 </code>
 </pre>
@@ -123,15 +124,45 @@
 </pre>
 </div>
 
-			  <hr>
+			<hr>
 
-			  <header>
+			<header>
 				<h2>Właściwość flex-wrap</h2>
 		  	</header>
 
-		  	<p>Właściwość <code>flex-wrap</code> określa czy elementy w srodku contenera powinny się zwijać czy też nie.</p>
+		  	<p>Właściwość <code>flex-wrap</code> określa, czy elementy w srodku contenera powinny się zwijać czy też nie.</p>
 
+			  <section id="example-3" class="example">
+				<header class="row">
+					<h3>Przykład:</h3>
+				</header>
+				<p>Kliknij jeden z guzików i zmien rozmiar ekranu aby zobaczyć jak działają wartości właściwość <code>flex-wrap</code>. Dla lepszego zobrazowania tego jak działa <code>flex-wrap</code> poniższy przykład ma 10 elastycznych elementów, .</p>
+				<form>
+					<input onclick="switchClass('wrap', example3)" class="button" type="button" value="wrap">
+					<input onclick="switchClass('nowrap', example3)" class="button" type="button" value="nowrap">
+					<input onclick="switchClass('wrap-reverse', example3)" class="button" type="button" value="wrap-reverse">
+					<input onclick="resetClass(example3)" class="button" type="button" value="reset">
+				</form>
+				<p class=""><code>flex-wrap:<span class="write"> ;</span></code></p>
+				<div class="code">
+					<div class="flex-conteiner">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+						<div class="item">5</div>
+						<div class="item">6</div>
+						<div class="item">7</div>
+						<div class="item">8</div>
+						<div class="item">9</div>
+						<div class="item">10</div>
+					</div>
+				</div>
+			</section>
 
+			<p>Kiedy wartości właściwość <code>flex-wrap</code> bedzię ustawiona na <code>nowrap</code>, a elementy w środku kontenera będą miały ustiawione szerokość za pomocą właściwości <code>width</code> bez podanego <code>padding</code> to w momecie kiedy bedziemy zmieniać szerokość ekranu, to elementy będą sie kurczyć aż do momentu w który osiągną minimalną szerokość kontentu który jest w nich zawarty.</p>
+
+			<p><code>flex-wrap: nowrap</code> jest wartościa domyślna wszystkich elementów elastyczny, w momecie w którym pominiemy właściwość <code>flex-wrap</code> to wszystkie elementy które są elastyczne będą sie zachowywać dokładnie tak jakby miały ustawione <code>nowrap</code>.</p>
     	</article>
 	</main>
 
